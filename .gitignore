@@ -4,7 +4,7 @@ __pycache__/git c
 *$py.class
 
 # html
-*.html 
+**.html 
 
 # sqlite dbs
 *.sqlite
