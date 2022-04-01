@@ -3,6 +3,9 @@ __pycache__/git c
 *.py[cod]
 *$py.class
 
+# html
+*.html 
+
 # sqlite dbs
 *.sqlite
 *.sqlite3
