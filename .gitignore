@@ -4,7 +4,8 @@ __pycache__/git c
 *$py.class
 
 # sqlite dbs
-*.db
+*.sqlite
+*.sqlite3
 
 # C extensions
 *.so
