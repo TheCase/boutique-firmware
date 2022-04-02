@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: kaniko-builder
+  name: boutique-firmware-kaniko-builder
   namespace: kaniko
 spec:
   containers:
     - name: kaniko
       image: gcr.io/kaniko-project/executor:latest
       args: ["--context=git://github.com//thecase/boutique-firmware.git",
-             "--destination=thecase/boutique-firmware:1.0.0",
+             "--destination=thecase/boutique-firmware:1.0.2",
              "--dockerfile=Dockerfile"]
       volumeMounts:
         - name: kaniko-secret
