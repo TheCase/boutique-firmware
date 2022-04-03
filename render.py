@@ -3,7 +3,7 @@ import time
 from bs4 import BeautifulSoup
 import urllib.request
 import re
-from datetime import date
+from datetime import datetime
 
 from numpy import datetime_as_string
 from jinja2 import Environment, FileSystemLoader
@@ -79,7 +79,7 @@ def render(data):
   file_loader = FileSystemLoader('.')
   env = Environment(loader=file_loader)
   template = env.get_template('template.jinja')
-  today = date.today().strftime("%B %d %Y")
+  today = datetime.utcnow().strftime("%B %d %Y %H:%M:%S UTC")
   content = template.render(data=data, today=today, issues_link=issues_link)
   write_content(content)
   log.info("completed html render")
