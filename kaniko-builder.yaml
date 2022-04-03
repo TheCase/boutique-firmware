@@ -10,6 +10,7 @@ spec:
       image: gcr.io/kaniko-project/executor:latest
       args: ["--context=git://github.com//thecase/boutique-firmware.git",
              "--destination=thecase/boutique-firmware:1.0.3",
+             "--destination=thecase/boutique-firmware:latest",
              "--dockerfile=Dockerfile"]
       volumeMounts:
         - name: kaniko-secret
