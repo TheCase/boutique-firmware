@@ -87,6 +87,7 @@ def render(data):
 def main(models):
   log.info("starting data fetch.")
   data = dict()
+  models.sort()
   for model in models:
     label = model.upper()
     log.info("fetching info for {}".format(label))
